@@ -19,26 +19,26 @@ namespace IS445.Controllers
         public ActionResult FormatPhoneNumber(string inputNumber)
         {
 
-            if (string.IsNullOrEmpty(inputNumber))
-            {
-                return Content("invalid input, please try again");
-            }
-            else
-            {
-                string formatted = formatNumber(inputNumber);
-                return View((object)formatted);
-            }
+          if (string.IsNullOrEmpty(inputNumber))
+          {
+            return Content("invalid input, please try again");
+          }
+          else
+          {
+            string formatted = formatNumber(inputNumber);
+            return View((object)formatted);
+          }
         }
 
         // please implement your phone number formatting logic here
         private string formatNumber(string inputNumber)
         {
-            // imiplement formatting here
+          // imiplement formatting here
             string sub1 = inputNumber.Substring(0, 3);
             string sub2 = inputNumber.Substring(3, 3);
             string sub3 = inputNumber.Substring(6, 4);
-            return "formated number is: " + "(" + sub1 + ")" + " " + sub2 + "-" + sub3;
-
+            return  "(" + sub1 + ")" + " " + sub2 + "-" + sub3;
+            
         }
         public ActionResult Task2()
         {
